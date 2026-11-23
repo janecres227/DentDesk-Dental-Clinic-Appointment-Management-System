@@ -155,8 +155,8 @@ public class ManageServicesPanel extends JPanel {
 
         JPanel btns = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         btns.setOpaque(false);
-        saveBtn  = actionBtn("\uD83D\uDCBE Save", Theme.BTN_GREEN);
-        clearBtn = actionBtn("\u21BB Clear", Theme.BTN_LIGHT_BLUE);
+        saveBtn  = actionBtn("Save", Theme.BTN_GREEN);
+        clearBtn = actionBtn("Clear", Theme.BTN_LIGHT_BLUE);
         clearBtn.setForeground(Theme.TEXT_DARK);
         btns.add(saveBtn);
         btns.add(clearBtn);

@@ -398,6 +398,9 @@ public class ManageAppointmentsPanel extends JPanel {
             apptDAO.insert(new Appointment(0, patient.clientId, patient.displayName,
                     patient.walkInName, walkInPhone, dentist.id, dentist.name,
                     serviceId, serviceName, date, time, status, notes));
+            //Message to user on successful save
+            JOptionPane.showMessageDialog(this, "Appointment added successfully.",
+                    "Success", JOptionPane.INFORMATION_MESSAGE);
             
             clearForm();
             refreshAppointments();
