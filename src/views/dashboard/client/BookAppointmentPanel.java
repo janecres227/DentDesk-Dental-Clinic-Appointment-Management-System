@@ -69,9 +69,9 @@ public class BookAppointmentPanel extends JPanel {
         btnRow.setOpaque(false);
         btnRow.setAlignmentX(Component.LEFT_ALIGNMENT);
         
-        JButton addBtn = actionBtn("+ Add Appointment", Theme.BTN_GREEN);
-        JButton removeBtn = actionBtn("\uD83D\uDDD1 Remove Appointment", Theme.BTN_RED);
-        JButton cancelBtn = actionBtn("\u23F1 Cancel Appointment", Theme.BTN_ORANGE);
+        JButton addBtn = actionBtn("Add Appointment", Theme.BTN_GREEN);
+        JButton removeBtn = actionBtn("Remove Appointment", Theme.BTN_RED);
+        JButton cancelBtn = actionBtn("Cancel Appointment", Theme.BTN_ORANGE);
         
         btnRow.add(addBtn);
         btnRow.add(removeBtn);

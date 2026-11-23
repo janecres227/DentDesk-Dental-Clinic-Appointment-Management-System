@@ -131,10 +131,10 @@ public class ManageAppointmentsPanel extends JPanel {
         //Toolbar Buttons
         JPanel btnRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         btnRow.setOpaque(false);
-        JButton insertBtn = actionBtn("+ Insert Appointment", Theme.BTN_GREEN);
-        JButton removeBtn = actionBtn("\uD83D\uDDD1 Remove Appointment", Theme.BTN_RED);
-        JButton searchBtn = actionBtn("\uD83D\uDD0D Search Appointment", Theme.BTN_BLUE);
-        JButton allBtn    = actionBtn("\u2630 Display All", Theme.BTN_GRAY);
+        JButton insertBtn = actionBtn("Insert Appointment", Theme.BTN_GREEN);
+        JButton removeBtn = actionBtn("Remove Appointment", Theme.BTN_RED);
+        JButton searchBtn = actionBtn("Search Appointment", Theme.BTN_BLUE);
+        JButton allBtn = actionBtn("Display All", Theme.BTN_GRAY);
         
         btnRow.add(insertBtn);
         btnRow.add(removeBtn);
@@ -221,8 +221,8 @@ public class ManageAppointmentsPanel extends JPanel {
 
         JPanel btns = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         btns.setOpaque(false);
-        saveBtn  = actionBtn("\uD83D\uDCBE Save", Theme.BTN_GREEN);
-        clearBtn = actionBtn("\u21BB Clear", Theme.BTN_LIGHT_BLUE);
+        saveBtn  = actionBtn("Save", Theme.BTN_GREEN);
+        clearBtn = actionBtn("Clear", Theme.BTN_LIGHT_BLUE);
         clearBtn.setForeground(Theme.TEXT_DARK);
         btns.add(saveBtn);
         btns.add(clearBtn);
@@ -677,7 +677,7 @@ public class ManageAppointmentsPanel extends JPanel {
         statusBox.setEnabled(enabled);
         notesArea.setEnabled(enabled);
         walkInPhoneField.setEnabled(enabled);
-        if (saveBtn  != null) saveBtn.setEnabled(enabled);
+        if (saveBtn != null) saveBtn.setEnabled(enabled);
         if (clearBtn != null) clearBtn.setEnabled(enabled);
     }
 

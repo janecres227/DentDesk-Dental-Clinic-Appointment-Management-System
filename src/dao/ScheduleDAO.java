@@ -45,7 +45,7 @@ public class ScheduleDAO {
     }
 
     //Returns schedule list from ResultSet, mapping each row to a Schedule object.
-    private List<Schedule> query(String sql, String unused) throws SQLException {
+    private List<Schedule> query(String sql,  String unused) throws SQLException {
         List<Schedule> list = new ArrayList<>();
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql);

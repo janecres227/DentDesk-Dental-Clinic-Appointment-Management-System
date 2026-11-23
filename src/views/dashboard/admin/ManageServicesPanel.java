@@ -83,10 +83,10 @@ public class ManageServicesPanel extends JPanel {
         //Toolbar Buttons
         JPanel btnRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         btnRow.setOpaque(false);
-        JButton insertBtn = actionBtn("+ Insert Service", Theme.BTN_GREEN);
-        JButton removeBtn = actionBtn("\uD83D\uDDD1 Remove Service", Theme.BTN_RED);
-        JButton searchBtn = actionBtn("\uD83D\uDD0D Search Service", Theme.BTN_BLUE);
-        JButton allBtn    = actionBtn("\u2630 Display All", Theme.BTN_GRAY);
+        JButton insertBtn = actionBtn("Insert Service", Theme.BTN_GREEN);
+        JButton removeBtn = actionBtn("Remove Service", Theme.BTN_RED);
+        JButton searchBtn = actionBtn("Search Service", Theme.BTN_BLUE);
+        JButton allBtn    = actionBtn("Display All", Theme.BTN_GRAY);
         
         btnRow.add(insertBtn);
         btnRow.add(removeBtn);

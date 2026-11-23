@@ -58,7 +58,7 @@ public class ManageDentistsPanel extends JPanel {
         JPanel middle = new JPanel(new BorderLayout(16, 0));
         middle.setOpaque(false);
         middle.add(buildManageCard(), BorderLayout.CENTER);
-        middle.add(buildInfoCard(),   BorderLayout.EAST);
+        middle.add(buildInfoCard(), BorderLayout.EAST);
         
         add(middle, BorderLayout.CENTER);
         add(buildRecordsCard(), BorderLayout.SOUTH);
@@ -88,10 +88,10 @@ public class ManageDentistsPanel extends JPanel {
         //Toolbar Buttons
         JPanel btnRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         btnRow.setOpaque(false);
-        JButton insertBtn = actionBtn("+ Insert Dentist", Theme.BTN_GREEN);
-        JButton removeBtn = actionBtn("\uD83D\uDDD1 Remove Dentist", Theme.BTN_RED);
-        JButton searchBtn = actionBtn("\uD83D\uDD0D Search Dentist", Theme.BTN_BLUE);
-        JButton allBtn = actionBtn("\u2630 Display All", Theme.BTN_GRAY);
+        JButton insertBtn = actionBtn("Insert Dentist", Theme.BTN_GREEN);
+        JButton removeBtn = actionBtn("Remove Dentist", Theme.BTN_RED);
+        JButton searchBtn = actionBtn("Search Dentist", Theme.BTN_BLUE);
+        JButton allBtn = actionBtn("Display All", Theme.BTN_GRAY);
         
         btnRow.add(insertBtn);
         btnRow.add(removeBtn);
@@ -175,8 +175,8 @@ public class ManageDentistsPanel extends JPanel {
 
         JPanel btns = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         btns.setOpaque(false);
-        saveBtn  = actionBtn("\uD83D\uDCBE Save", Theme.BTN_GREEN);
-        clearBtn = actionBtn("\u21BB Clear", Theme.BTN_LIGHT_BLUE);
+        saveBtn  = actionBtn("Save", Theme.BTN_GREEN);
+        clearBtn = actionBtn("Clear", Theme.BTN_LIGHT_BLUE);
         clearBtn.setForeground(Theme.TEXT_DARK);
         btns.add(saveBtn);
         btns.add(clearBtn);
@@ -509,14 +509,7 @@ public class ManageDentistsPanel extends JPanel {
             addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    //Deselect previous card
-                    if (selectedCard != null && selectedCard != DentistCard.this) {
-                        selectedCard.setSelected(false);
-                    }
-                    setSelected(true);
-                    selectedCard = DentistCard.this;
                     
-                    //Populate the right-side form with this dentist's data
                     editingId = dentist.getId();
                     nameField.setText(dentist.getName());
                     nameField.setForeground(Theme.TEXT_DARK);
@@ -526,19 +519,6 @@ public class ManageDentistsPanel extends JPanel {
                     setFormEnabled(true);
                 }
             });
-        }
-
-        //Toggles the visual highlight (thick blue border) when selected.
-        public void setSelected(boolean selected) {
-            if (selected) {
-                setBorder(BorderFactory.createCompoundBorder(
-                        new LineBorder(Theme.BTN_BLUE, 2),
-                        BorderFactory.createEmptyBorder(14, 14, 14, 14)));
-            } else {
-                setBorder(BorderFactory.createCompoundBorder(
-                        new LineBorder(Theme.CARD_BORDER, 1),
-                        BorderFactory.createEmptyBorder(15, 15, 15, 15)));
-            }
         }
 
         public Dentist getDentist() {

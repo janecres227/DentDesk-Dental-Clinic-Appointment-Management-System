@@ -90,9 +90,9 @@ public class ManageStaffPanel extends JPanel {
         //Toolbar Buttons
         JPanel btnRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         btnRow.setOpaque(false);
-        JButton insertBtn = actionBtn("+ Add Staff", Theme.BTN_GREEN);
-        JButton searchBtn = actionBtn("\uD83D\uDD0D Search Staff", Theme.BTN_BLUE);
-        JButton allBtn    = actionBtn("\u2630 Display All", Theme.BTN_GRAY);
+        JButton insertBtn = actionBtn("Add Staff", Theme.BTN_GREEN);
+        JButton searchBtn = actionBtn("Search Staff", Theme.BTN_BLUE);
+        JButton allBtn    = actionBtn("Display All", Theme.BTN_GRAY);
         
         btnRow.add(insertBtn);
         btnRow.add(searchBtn);

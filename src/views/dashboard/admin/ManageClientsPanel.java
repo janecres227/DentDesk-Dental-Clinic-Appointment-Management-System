@@ -30,9 +30,9 @@ public class ManageClientsPanel extends JPanel {
         //Top Toolbar (Buttons)
         JPanel toolbar = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         toolbar.setOpaque(false);
-        JButton removeBtn = actionBtn("\uD83D\uDDD1 Remove Client", Theme.BTN_RED);
-        JButton searchBtn = actionBtn("\uD83D\uDD0D Search Client", Theme.BTN_BLUE);
-        JButton allBtn    = actionBtn("\u2630 Display All", Theme.BTN_GRAY);
+        JButton removeBtn = actionBtn("Remove Client", Theme.BTN_RED);
+        JButton searchBtn = actionBtn("Search Client", Theme.BTN_BLUE);
+        JButton allBtn    = actionBtn("Display All", Theme.BTN_GRAY);
         
         toolbar.add(removeBtn);
         toolbar.add(searchBtn);
@@ -299,7 +299,7 @@ public class ManageClientsPanel extends JPanel {
                 BorderFactory.createLineBorder(Theme.CARD_BORDER),
                 BorderFactory.createEmptyBorder(4, 10, 4, 10)));
         
-        JButton searchBtn = actionBtn("\uD83D\uDD0D Search", Theme.BTN_BLUE);
+        JButton searchBtn = actionBtn("Search", Theme.BTN_BLUE);
         searchRow.add(searchField, BorderLayout.CENTER);
         searchRow.add(searchBtn, BorderLayout.EAST);
         form.add(searchRow);

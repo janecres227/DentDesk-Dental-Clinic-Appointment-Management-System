@@ -101,10 +101,10 @@ public class ManageSchedulesPanel extends JPanel {
         //Create the toolbar buttons
         JPanel btnRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         btnRow.setOpaque(false);
-        JButton insertBtn = actionBtn("+ Insert Schedule", Theme.BTN_GREEN);
-        JButton removeBtn = actionBtn("\uD83D\uDDD1 Remove Schedule", Theme.BTN_RED);
-        JButton searchBtn = actionBtn("\uD83D\uDD0D Search Schedule", Theme.BTN_BLUE);
-        JButton allBtn = actionBtn("\u2630 Display All", Theme.BTN_GRAY);
+        JButton insertBtn = actionBtn("Insert Schedule", Theme.BTN_GREEN);
+        JButton removeBtn = actionBtn("Remove Schedule", Theme.BTN_RED);
+        JButton searchBtn = actionBtn("Search Schedule", Theme.BTN_BLUE);
+        JButton allBtn = actionBtn("Display All", Theme.BTN_GRAY);
         
         btnRow.add(insertBtn);
         btnRow.add(removeBtn);
